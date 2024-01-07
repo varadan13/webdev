@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cached Image</title>
+  </head>
+  <body>
+    <!-- Include the image tag with the source path -->
+    <img src="./load.jpg" alt="Cached Image" />
+    <script>
+      function loadUncachedImage() {
+        // Create a new Image element
+        var img = new Image();
+
+        // Generate a unique parameter (timestamp)
+        var timestamp = new Date().getTime();
+
+        // Set the image source with the cache-busting parameter
+        img.src = "./load.jpg?" + timestamp;
+
+        // Append the image to the body or any other element
+        document.body.appendChild(img);
+      }
+
+      // Call the function to load the uncached image
+      loadUncachedImage();
+    </script>
+  </body>
+</html>
