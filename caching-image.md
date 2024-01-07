@@ -1,6 +1,6 @@
 # Caching Image
 
-> how to configure the caching time ttl of img tag?
+> how to configure the caching ttl of img tag?
 
 The img tag itself doesn't have a built-in mechanism to set a caching time (Time-To-Live or TTL). Caching is typically controlled on the server side through HTTP headers. You can configure the caching behavior for images by setting appropriate HTTP headers in the server response.
 
